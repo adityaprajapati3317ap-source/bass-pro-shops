@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claim Your $750 Bass Pro Shops Gift Card</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(160deg, #0d1f14 0%, #1a3a28 35%, #2d5a3d 70%, #1e3d2a 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 16px 40px;
+      color: #1a1a1a;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* subtle outdoor texture overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse at 20% 20%, rgba(251, 208, 5, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(196, 22, 27, 0.06) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .online-badge {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.95);
+      color: #1a1a1a;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 50px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 24px;
+    }
+
+    .online-badge .dot {
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .card {
+      position: relative;
+      z-index: 2;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+      width: 100%;
+      max-width: 420px;
+      padding: 32px 28px 28px;
+      text-align: center;
+    }
+
+    .logo-area {
+      margin-bottom: 18px;
+    }
+
+    .bass-logo {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 12px;
+      background: #FBD005;
+      border-radius: 50%;
+      border: 5px solid #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .bass-logo .fish {
+      font-size: 42px;
+      line-height: 1;
+      margin-bottom: -4px;
+    }
+
+    .bass-logo .brand {
+      font-size: 11px;
+      font-weight: 800;
+      color: #C4161B;
+      letter-spacing: -0.3px;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .headline {
+      font-size: 17px;
+      color: #333;
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+
+    .headline strong {
+      color: #C4161B;
+      font-weight: 700;
+    }
+
+    .divider {
+      height: 1px;
+      background: #e5e7eb;
+      margin: 20px 0;
+    }
+
+    .steps-box {
+      background: #f8faf8;
+      border-radius: 14px;
+      overflow: hidden;
+      text-align: left;
+      margin-bottom: 22px;
+    }
+
+    .steps-header {
+      background: #e8f0e9;
+      padding: 12px 16px;
+      font-weight: 600;
+      font-size: 15px;
+      color: #1a3a28;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 16px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 14.5px;
+      color: #1f2937;
+    }
+
+    .step-num {
+      width: 26px;
+      height: 26px;
+      background: #C4161B;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .cta-btn {
+      display: block;
+      width: 100%;
+      background: linear-gradient(180deg, #E9C637 0%, #FBD005 40%, #e6b800 100%);
+      color: #1a1a1a;
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 16px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 6px 0 #b38f00, 0 10px 20px rgba(0,0,0,0.2);
+      transition: all 0.15s ease;
+      margin-bottom: 8px;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(2px);
+      box-shadow: 0 4px 0 #b38f00, 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .cta-btn:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 #b38f00;
+    }
+
+    .rating-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      padding: 20px;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .stars {
+      color: #22c55e;
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+
+    .rating-score {
+      font-size: 20px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .rating-sub {
+      font-size: 13px;
+      color: #6b7280;
+      margin: 4px 0 8px;
+    }
+
+    .trustpilot {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #00b67a;
+    }
+
+    .faq-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      margin-top: 16px;
+      width: 100%;
+      max-width: 420px;
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+    }
+
+    .faq-title {
+      padding: 18px 20px 12px;
+      font-size: 17px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .faq-item {
+      border-top: 1px solid #f3f4f6;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 15px 20px;
+      text-align: left;
+      font-size: 15px;
+      font-weight: 500;
+      color: #1f2937;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-question:hover {
+      background: #f9fafb;
+    }
+
+    .faq-icon {
+      font-size: 20px;
+      color: #9ca3af;
+      transition: transform 0.2s;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: #f9fafb;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 200px;
+    }
+
+    .faq-answer p {
+      padding: 0 20px 16px;
+      font-size: 14px;
+      color: #4b5563;
+      line-height: 1.5;
+    }
+
+    .disclaimer {
+      margin-top: 28px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      text-align: center;
+      max-width: 420px;
+      line-height: 1.5;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 28px 20px 24px;
+      }
+      .bass-logo {
+        width: 96px;
+        height: 96px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="online-badge">
+    <span class="dot"></span>
+    <span id="online-count">847</span> online now
+  </div>
+
+  <div class="card">
+    <div class="logo-area">
+      <div class="bass-logo">
+        <div class="fish">🐟</div>
+        <div class="brand">Bass Pro<br>Shops</div>
+      </div>
+    </div>
+
+    <p class="headline">
+      Complete the steps below to claim your<br>
+      <strong>$750 Bass Pro Shops gift card</strong>
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="steps-box">
+      <div class="steps-header">Steps to Qualify</div>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>Click on “Claim Now”</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>Enter your email and basic information</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>Complete 4–5 sponsored deals (required)</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>Claim your $750 Bass Pro Shops gift card</div>
+      </div>
+    </div>
+
+    <a href="https://giftclick.org/?offer_id=5267&aff_id=145283" class="cta-btn" target="_blank" rel="noopener">
+      CLAIM NOW
+    </a>
+  </div>
+
+  <div class="rating-card">
+    <div class="stars">★★★★★</div>
+    <div class="rating-score">4.9 out of 5</div>
+    <div class="rating-sub">Based on 2,369 reviews</div>
+    <div class="trustpilot">★ Trustpilot</div>
+  </div>
+
+  <div class="faq-card">
+    <div class="faq-title">Frequently Asked Questions</div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Who is this offer for?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Eligibility depends on the promotion partner’s current requirements. Review the terms shown on the next page before participating.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        How much can I save?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Eligible participants may qualify for a $750 Bass Pro Shops gift card after completing the stated requirements.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        What are sponsored deals?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Sponsored deals are third-party offers that may include trials, subscriptions, purchases, or app activities. Each deal shows its own terms and any cost before you choose it.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        How many deals do I need to complete?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>The promotion typically requires completing 4–5 qualifying deals. The exact rules appear on the partner’s eligibility page.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="disclaimer">
+    This is an independent promotional offer and is not affiliated with or endorsed by Bass Pro Shops or its subsidiaries.
+  </p>
+
+  <script>
+    // Simple FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        
+        // Open clicked if it was closed
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Fake live counter fluctuation
+    setInterval(() => {
+      const el = document.getElementById('online-count');
+      const current = parseInt(el.textContent);
+      const change = Math.floor(Math.random() * 7) - 3;
+      el.textContent = Math.max(780, current + change);
+    }, 4000);
+  </script>
+</body>
+</html>
